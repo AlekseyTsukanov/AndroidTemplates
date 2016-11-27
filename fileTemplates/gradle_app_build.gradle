@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    def SERVER_URL_FIELD_TYPE = "String"
+    def SERVER_URL_FIELD_NAME = "SERVER_URL"
+
+    compileSdkVersion versions.compileVersion
+    buildToolsVersion versions.buildToolsVersion
+    defaultConfig {
+        applicationId "com.acukanov.rocketmetrics"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode versions.versionCode
+        versionName versions.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField SERVER_URL_FIELD_TYPE, SERVER_URL_FIELD_NAME, "\"http://127.0.0.1:8080\""
+    }
+
+    repositories {
+        maven {
+            url 'https://dl.bintray.com/terrakok/terramaven/'
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("../debug.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+        release {
+            storeFile file("../debug.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            applicationIdSuffix ".debug"
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        guideVueDev {
+            applicationId "com.acukanov.rocketmetrics"
+        }
+        guideVueProd {
+            applicationId "com.acukanov.rocketmetrics"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile lib.appCompatV7
+    compile lib.supportV4
+    compile lib.supportV13
+    compile lib.constraintLayout
+    compile lib.design
+    compile lib.recyclerView
+    compile lib.cardView
+    compile lib.butterKnife
+    apt lib.butterKnifeCompiler
+    compile lib.circleImageView
+    compile lib.glide
+
+    apt lib.daggerCompiler
+    compile lib.dagger
+    provided lib.javaxAnnotations
+
+    compile lib.eventBus
+
+    compile lib.gson
+    compile lib.retrofit2
+    compile lib.retrofitConverterGson
+    compile lib.retrofitAdapterRxJava
+    compile lib.okHttp3
+    compile lib.okHttpLogging
+
+    compile lib.rxJava
+    compile lib.rxAndroid
+
+    compile lib.moxi
+    compile lib.moxiAppCompat
+    compile lib.moxiCompiler
+
+    testCompile 'junit:junit:4.12'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestCompile lib.supportAnnotations
+}

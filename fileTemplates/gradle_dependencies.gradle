@@ -1,0 +1,73 @@
+ext.versions = [
+        compileVersion          : 25,
+        buildToolsVersion       : '25.0.0',
+        minSdk                  : 16,
+        targetSdk               : 25,
+
+        versionCode             : 1,
+        versionName             : '1.1',
+
+        supportLib              : '25.0.0',
+        constraintLayout        : '1.0.0-beta3',
+
+        dagger                  : '2.7',
+        jsr250                  : '1.0',
+
+        gson                    : '2.5',
+
+        butterKnife             : '8.4.0',
+        butterKnifeOld          : '6.1.0',
+        circleImageView         : '2.0.0',
+
+        retrofit2               : '2.1.0',
+        okHttp3                 : '3.3.1',
+
+        eventBus                : '3.0.0',
+
+        glide                   : '3.7.0',
+
+        rxJava                  : '1.1.5',
+        rxAndroid               : '1.2.0',
+
+        moxi                    : '1.2.1',
+]
+
+ext.lib = [
+        appCompatV7             : "com.android.support:appcompat-v7:$versions.supportLib",
+        supportAnnotations      : "com.android.support:support-annotations:$versions.supportLib",
+        constraintLayout        : "com.android.support.constraint:constraint-layout:$versions.constraintLayout",
+
+        dagger                  : "com.google.dagger:dagger:$versions.dagger",
+        daggerCompiler          : "com.google.dagger:dagger-compiler:$versions.dagger",
+        javaxAnnotations        : "javax.annotation:jsr250-api:$versions.jsr250",
+
+        supportV4               : "com.android.support:support-v4:$versions.supportLib",
+        supportV13              : "com.android.support:support-v13:$versions.supportLib",
+        design                  : "com.android.support:design:$versions.supportLib",
+        recyclerView            : "com.android.support:recyclerview-v7:$versions.supportLib",
+        cardView                : "com.android.support:cardview-v7:$versions.supportLib",
+
+        gson                    : "com.google.code.gson:gson:$versions.gson",
+
+        butterKnife             : "com.jakewharton:butterknife:$versions.butterKnife",
+        butterKnifeCompiler     : "com.jakewharton:butterknife-compiler:$versions.butterKnife",
+        butterKnifeOld          : "com.jakewharton:butterknife:$versions.butterKnifeOld",
+        circleImageView         : "de.hdodenhof:circleimageview:$versions.circleImageView",
+
+        retrofit2               : "com.squareup.retrofit2:retrofit:$versions.retorfit2",
+        retrofitConverterGson   : "com.squareup.retrofit2:converter-gson:$versions.retrofit2",
+        retrofitAdapterRxJava   : "com.squareup.retrofit2:adapter-rxjava:$versions.retrofit2",
+        okHttp3                 : "com.squareup.okhttp3:okhttp:$versions.okHttp3",
+        okHttpLogging           : "com.squareup.okhttp3:logging-interceptor:$versions.okHttp3",
+
+        eventBus                : "org.greenrobot:eventbus:$versions.eventBus",
+
+        glide                   : "com.github.bumptech.glide:glide:$versions.glide",
+
+        rxJava                  : "io.reactivex:rxjava:$versions.rxJava",
+        rxAndroid               : "io.reactivex:rxandroid:$versions.rxAndroid",
+
+        moxi                    : "com.arello-mobile:moxy:$versions.moxi",
+        moxiAppCompat           : "com.arello-mobile:moxy-app-compat:$versions.moxi",
+        moxiCompiler            : "com.arello-mobile:moxy-compiler:$versions.moxi",
+]

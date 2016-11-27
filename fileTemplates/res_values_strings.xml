@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">RocketMetrics</string>
+
+    <string name="res_menu_drawer_open">Drawer opened</string>
+    <string name="res_menu_drawer_close">Drawer closed</string>
+
+    <string name="menu_drawer_test1">Test1</string>
+    <string name="menu_drawer_test2">Test2</string>
+    <string name="menu_drawer_test3">Test3</string>
+
+    <string name="text_user_name">User Name</string>
+    <string name="text_lorem_ipsum_long">Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident,
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </string>
+    <string name="text_lorem_ipsum_short">Lorem ipsum</string>
+    <string name="text_sample_date">01.01.2000</string>
+
+    <string name="text_hint_email">Email</string>
+    <string name="text_hint_password">Password</string>
+
+    <string name="text_recover_password">Recover password</string>
+
+    <string name="btn_login">Login</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_done">@string/done</string>
+    <string name="btn_revert">@string/revert</string>
+
+    <string name="dialog_action_ok">@string/ok</string>
+    <string name="dialog_action_cancel">@string/cancel</string>
+    <string name="dialog_error_title">Sorry</string>
+    <string name="dialog_message_internet_permission_error">
+        Can\'t start fetching remote data. You need to grant internet permission
+    </string>
+
+    <string name="dialog_title_internet_disabled">Internet connection disabled</string>
+    <string name="dialog_message_internet">Please, enable internet to continue</string>
+    <string name="dialog_message_error_login_empty_view">Please, fill login and email or use Code to login</string>
+
+    <string name="ok">Ok</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancel</string>
+    <string name="text_continue">Continue</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="back">Back</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="done">Done</string>
+    <string name="revert">Revert</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+</resources>
